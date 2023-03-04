@@ -20,19 +20,19 @@ docker-ubuntu-desktop 是一个 Docker 镜像，提供 Web VNC 接口来访问 U
 - 打印帮助页:
 
 ```
-docker run imgyh/docker-ubuntu-desktop --help
+docker run aqiuxx/docker-ubuntu-desktop --help
 ```
 
 - 运行映射到本地端口 `5901`（vnc 协议）和 `6901`（vnc web 访问）的命令：
 
 ```
-docker run -d -p 5901:5901 -p 6901:6901 imgyh/docker-ubuntu-desktop
+docker run -d -p 5901:5901 -p 6901:6901 aqiuxx/docker-ubuntu-desktop
 ```
 
 - 进入容器使用交互模式 `-it` 和 `bash`
 
 ```
-docker run -it -p 5901:5901 -p 6901:6901 imgyh/docker-ubuntu-desktop bash
+docker run -it -p 5901:5901 -p 6901:6901 aqiuxx/docker-ubuntu-desktop bash
 ```
 
 ## 连接与控制
@@ -57,7 +57,7 @@ docker run -it -p 5901:5901 -p 6901:6901 imgyh/docker-ubuntu-desktop bash
 覆盖环境变量的值 `VNC_PW`
 
 ```
-docker run -it -p 5901:5901 -p 6901:6901 -e VNC_PW=my-pw imgyh/docker-ubuntu-desktop
+docker run -it -p 5901:5901 -p 6901:6901 -e VNC_PW=my-pw aqiuxx/docker-ubuntu-desktop
 ```
 
 ### 重写 VNC 分辨率
@@ -65,7 +65,7 @@ docker run -it -p 5901:5901 -p 6901:6901 -e VNC_PW=my-pw imgyh/docker-ubuntu-des
 覆盖环境变量的值 `VNC_RESOLUTION`
 
 ```
-docker run -it -p 5901:5901 -p 6901:6901 -e VNC_RESOLUTION=800x600 imgyh/docker-ubuntu-desktop
+docker run -it -p 5901:5901 -p 6901:6901 -e VNC_RESOLUTION=800x600 aqiuxx/docker-ubuntu-desktop
 ```
 
 ### 无密码启动
@@ -73,14 +73,14 @@ docker run -it -p 5901:5901 -p 6901:6901 -e VNC_RESOLUTION=800x600 imgyh/docker-
 设置 `VNC_PASSWORDLESS` 为 `true` 禁用 VNC 密码
 
 ```
-docker run -it -p 5901:5901 -p 6901:6901 -e VNC_PASSWORDLESS=true imgyh/docker-ubuntu-desktop
+docker run -it -p 5901:5901 -p 6901:6901 -e VNC_PASSWORDLESS=true aqiuxx/docker-ubuntu-desktop
 ```
 
 ### 仅查看 VNC
 
 设置环境变量 `VNC_VIEW_ONLY=true`。如果设置，启动脚本将为控制连接创建一个随机密码保存在 `VNC_PW`环境变量中。可以连接到容器查看密码。
 ```
-docker run -it -p 5901:5901 -p 6901:6901 -e VNC_VIEW_ONLY=true imgyh/docker-ubuntu-desktop
+docker run -it -p 5901:5901 -p 6901:6901 -e VNC_VIEW_ONLY=true aqiuxx/docker-ubuntu-desktop
 ```
 
 ## 拼音输入法设置
