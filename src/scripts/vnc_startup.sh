@@ -75,6 +75,22 @@ fi
 echo "$VNC_PW" | vncpasswd -f >> $PASSWD_PATH
 chmod 600 $PASSWD_PATH
 
+# USER=${USER:-root}
+# HOME=/root
+# if [ "$USER" != "root" ]; then
+#     echo "* enable custom user: $USER"
+#     useradd --create-home --shell /bin/bash --user-group --groups adm,sudo $USER
+#     if [ -z "$PASSWORD" ]; then
+#         echo "  set default password to \"ubuntu\""
+#         PASSWORD=ubuntu
+#     fi
+#     HOME=/home/$USER
+#     echo "$USER:$PASSWORD" | chpasswd
+#     cp -r /root/{.config,.ros} ${HOME}
+#     chown -R $USER:$USER ${HOME}
+#     [ -d "/dev/snd" ] && chgrp -R adm /dev/snd
+# fi
+
 
 ## start vncserver and noVNC webclient
 echo -e "\n------------------ start noVNC  ----------------------------"
