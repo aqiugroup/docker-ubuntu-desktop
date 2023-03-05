@@ -3,7 +3,7 @@
 # Default values for variables
 REPO  ?= aqiuxx/vnc-ros-noetic-full
 REPO_TEST  ?= aqiuxx/vnc-ros-noetic-full2
-TAG   ?= ros_pcl_pangolin
+TAG   ?= latest
 
 CONTAINER ?= vnc-ros-noetic-full-test
 CONTAINER_TEST ?= vnc-ros-noetic-full2-test
